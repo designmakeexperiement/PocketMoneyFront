@@ -1,11 +1,20 @@
 import React, {Component} from 'react';
-
+import Nav from './nav';
+import {Switch, Route} from 'react-router-dom';
+import Home from '../containers/home';
+import ExpenseNew from '../containers/expense_new';
+import Calendar from '../containers/calendar';
 
 export default class App extends Component {
   render () {
       return (
         <div>
-          HI
+          <Nav />
+          <Switch>
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/expense/new" component={ExpenseNew}/>
+            <Route exact path="/calendar" component={Calendar}/>
+          </Switch>
         </div>
       );
   }
