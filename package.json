@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "devOnly": "webpack-dev-server --mode development --config ./webpack/webpack.dev.config.js",
-    "scss": "node-sass -o style css -w",
+    "scss": "node-sass style css -w",
     "dev": "npm run scss | npm run devOnly"
   },
   "author": "jordan hiatt",

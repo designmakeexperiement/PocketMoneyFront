@@ -9,7 +9,7 @@ export default class Home extends Component {
         <div>
           <div className="homeCircle">
             <Link to="/expense/new">
-              <h1>Home</h1>
+              <h1>Enter Expense</h1>
             </Link>
           </div>       
         </div>
