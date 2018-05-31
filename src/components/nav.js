@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom';
-import "../../css/navbar.css";
+import "../../style/navbar.scss";
 
 
 
@@ -13,7 +13,7 @@ export default class Nav extends Component {
             <NavLink to="/about">About</NavLink>
             <NavLink to="/expense/new">Enter Expense</NavLink>
             <NavLink to="/calendar">Calendar</NavLink> 
-            <NavLink to="/signout">Sign Out</NavLink>                    
+            <NavLink to="/signout" id="nav-signout">Sign Out</NavLink>                    
           </nav>
         </div>
       );

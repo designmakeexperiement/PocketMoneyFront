@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import "../../style/home.scss";
 
 
 
@@ -7,9 +8,13 @@ export default class Home extends Component {
   render () {
       return (
         <div>
-          <div className="homeCircle">
-            <Link to="/expense/new">
-              <h1>Enter Expense</h1>
+          <div >
+              <Link to="/expense/new">
+              <div id="homeCircle">
+                <span className="homeCircleData">
+                  Enter Expense
+                </span>
+              </div>
             </Link>
           </div>       
         </div>
