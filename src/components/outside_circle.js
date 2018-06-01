@@ -6,6 +6,7 @@ export default class OutsideCircle extends Component {
       return (
         <div id="outsideCircle">
           <h3>
+            <span >c</span>
             <span className="char1">c</span>
             <span className="char2">l</span>
             <span className="char3">i</span>

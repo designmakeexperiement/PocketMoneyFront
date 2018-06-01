@@ -33,28 +33,32 @@ $font-color: white;
 }
 
 #outsideCircle {
+  position: absolute;
   display: inline;
+  top: -2%;
+  left: -2%;
   // top: 50%;
   // left: 50%;
   // height: 20em;
   // width: 20em;
-  height: 100%;
-  width: 100%;
-  transform: rotate(-90deg);
+  height: 107%;
+  width: 107%;
+  // transform: rotate(-80deg);
   font-family: 'IBM Plex Mono', monospace;
   color: black;
-  // margin-top: -10em;
+  // margin-left: -2em;
   // margin-left: -10em;
   z-index: 100;
   span {
     display: inline-block;
-    height: 20em;
+    height: 107%;
     position: absolute;
+    // right: 107%;
     width: 2em;
-    top: 0;
-    left: 0;
+    top: -7%;
+    // left: 0;
     transform-origin: center center;
-      z-index: 100;
+    z-index: 100;
   }
   @for $i from 1 through 25 { 
     .char#{$i} {
