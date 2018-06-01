@@ -1,5 +1,10 @@
+$default-font: 'Overpass', sans-serif;
+// Overpass
+// Montserrat
+// Poppins
+
 body {
-  h1 {
-    color: blue;
-  }
+  background-color: white;
+  font-family: $default-font;
 }
+

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import Nav from './nav';
 import {Switch, Route} from 'react-router-dom';
+import "../../style/main.scss";
+import Nav from './nav';
 import Home from '../containers/home';
 import ExpenseNew from '../containers/expense_new';
 import Calendar from '../containers/calendar';

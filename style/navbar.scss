@@ -1,0 +1,31 @@
+$nav-text: #212121;
+$nav-background: #009688;
+
+nav {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 5%;
+  position: absolute;
+  background-color: $nav-background;
+  a {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    padding: 1em;
+    padding-top: .5em;
+    color: $nav-text;
+    a:visited {
+      color: $nav-text
+    }
+    a:hover {
+      background-color: white;
+    }
+  }
+  #nav-signout {
+    float: right;
+    right: 1em;
+  }
+}

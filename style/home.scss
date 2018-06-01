@@ -1,0 +1,64 @@
+$circle-background: #25bcab;
+$font-color: white;
+
+.centerCircle {
+    top: 50%;
+    left: 50%;
+    // height: 20em;
+    // width: 20em;
+    margin-top: -10em;
+    margin-left: -10em;
+}
+
+#homeCircle {
+    position: fixed;
+    border-radius: 50%;
+    // top: 50%;
+    // left: 50%;
+    // margin-top: -10em;
+    // margin-left: -10em;
+    background-color: $circle-background;
+    text-align: center;
+    height: 20em;
+    width: 20em;
+    z-index: 0;
+    .homeCircleData {
+      color: $font-color;
+      margin-top: 2.5em;
+      // margin-bottom: 10em;
+      font-size: 3em;
+      z-index: 0;
+      // position: absolute;
+    } 
+}
+
+#outsideCircle {
+  display: inline;
+  // top: 50%;
+  // left: 50%;
+  // height: 20em;
+  // width: 20em;
+  height: 100%;
+  width: 100%;
+  transform: rotate(-90deg);
+  font-family: 'IBM Plex Mono', monospace;
+  color: black;
+  // margin-top: -10em;
+  // margin-left: -10em;
+  z-index: 100;
+  span {
+    display: inline-block;
+    height: 20em;
+    position: absolute;
+    width: 2em;
+    top: 0;
+    left: 0;
+    transform-origin: center center;
+      z-index: 100;
+  }
+  @for $i from 1 through 25 { 
+    .char#{$i} {
+      transform: (rotate(($i*6)+deg));
+    }    
+  }
+}
