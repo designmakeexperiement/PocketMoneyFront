@@ -1,4 +1,5 @@
 $nav-text: #212121;
+$nav-background: #009688;
 
 nav {
   position: relative;
@@ -7,7 +8,7 @@ nav {
   left: 0;
   height: 5%;
   position: absolute;
-  background-color: #00796B;
+  background-color: $nav-background;
   a {
     display: inline-block;
     position: relative;
@@ -15,9 +16,7 @@ nav {
     text-decoration: none;
     padding: 1em;
     padding-top: .5em;
-    a:link {
-      color: $nav-text
-    }
+    color: $nav-text;
     a:visited {
       color: $nav-text
     }
