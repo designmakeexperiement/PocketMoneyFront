@@ -1,8 +1,16 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import "../../style/home.scss";
+import axios from "axios";
 
 
+axios.get('/user?ID=12345')
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
 
 export default class Home extends Component {
   render () {
