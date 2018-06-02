@@ -4,65 +4,81 @@ $font-color: white;
 .centerCircle {
     top: 50%;
     left: 50%;
-    // height: 20em;
-    // width: 20em;
-    margin-top: -10em;
-    margin-left: -10em;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    height: 20em;
+    width: 20em;
 }
 
-#homeCircle {
+a {
+    z-index: 100;
+}
+.homeCircle {
+    animation-name: circleGrow;
+    animation-duration: 1s;
     position: fixed;
     border-radius: 50%;
-    // top: 50%;
-    // left: 50%;
-    // margin-top: -10em;
-    // margin-left: -10em;
     background-color: $circle-background;
     text-align: center;
     height: 20em;
     width: 20em;
-    z-index: 0;
     .homeCircleData {
+      animation-name: appear;
+      animation-duration: 1s;
       color: $font-color;
       margin-top: 2.5em;
-      // margin-bottom: 10em;
       font-size: 3em;
-      z-index: 0;
-      // position: absolute;
     } 
 }
 
-#outsideCircle {
-  position: absolute;
+.outsideCircle {
+  z-index: 0;
+  // visibility: visable;
+  animation-name: appear;
+  animation-duration: 1s;
   display: inline;
-  top: -2%;
-  left: -2%;
-  // top: 50%;
-  // left: 50%;
-  // height: 20em;
-  // width: 20em;
-  height: 107%;
-  width: 107%;
-  // transform: rotate(-80deg);
+  height: 24em;
+  width: 24em;
   font-family: 'IBM Plex Mono', monospace;
   color: black;
-  // margin-left: -2em;
-  // margin-left: -10em;
-  z-index: 100;
   span {
+    transform: translate(50%, 0);
     display: inline-block;
-    height: 107%;
+    height: 100%;
     position: absolute;
-    // right: 107%;
-    width: 2em;
-    top: -7%;
-    // left: 0;
+    width: 100%;
+    text-align: center;
     transform-origin: center center;
-    z-index: 100;
+
   }
   @for $i from 1 through 25 { 
     .char#{$i} {
-      transform: (rotate(($i*6)+deg));
+      transform: (rotate(($i*6 - 80)+deg));
     }    
   }
 }
+
+@keyframes circleGrow {
+    from {
+      height: 0em;
+      width: 0em;
+    }
+    to {
+      height: 20em;
+      width: 20em;
+    }
+}
+
+@keyframes appear {
+  0% {
+    visibility: hidden;
+  }
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+
