@@ -1,0 +1,84 @@
+$circle-background: #25bcab;
+$font-color: white;
+
+.centerCircle {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    height: 20em;
+    width: 20em;
+}
+
+a {
+    z-index: 100;
+}
+.homeCircle {
+    animation-name: circleGrow;
+    animation-duration: 1s;
+    position: fixed;
+    border-radius: 50%;
+    background-color: $circle-background;
+    text-align: center;
+    height: 20em;
+    width: 20em;
+    .homeCircleData {
+      animation-name: appear;
+      animation-duration: 1s;
+      color: $font-color;
+      margin-top: 2.5em;
+      font-size: 3em;
+    } 
+}
+
+.outsideCircle {
+  z-index: 0;
+  // visibility: visable;
+  animation-name: appear;
+  animation-duration: 1s;
+  display: inline;
+  height: 24em;
+  width: 24em;
+  font-family: 'IBM Plex Mono', monospace;
+  color: black;
+  span {
+    transform: translate(50%, 0);
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    transform-origin: center center;
+
+  }
+  @for $i from 1 through 25 { 
+    .char#{$i} {
+      transform: (rotate(($i*6 - 80)+deg));
+    }    
+  }
+}
+
+@keyframes circleGrow {
+    from {
+      height: 0em;
+      width: 0em;
+    }
+    to {
+      height: 20em;
+      width: 20em;
+    }
+}
+
+@keyframes appear {
+  0% {
+    visibility: hidden;
+  }
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+
