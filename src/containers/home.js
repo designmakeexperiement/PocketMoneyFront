@@ -4,22 +4,42 @@ import "../../style/home.scss";
 import axios from "axios";
 
 
-axios.get('/user?ID=12345')
-  .then(function (response) {
-    console.log(response);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+// axios.get('http://localhost:3000/api/v1/accounts/1')
+//   .then(function (response) {
+//     console.log(response);
+//   })
+//   .catch(function (error) {
+//     console.log(error);
+//   });
+
 
 export default class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      // pocketMoney: [props.pocketMoney]
+      pocketMoney: []
+    }
+  }
+
+  componentDidMount() {
+    axios.get(`http://localhost:3000/api/v1/accounts/1`)
+      .then(res => {
+        const pocketMoney = res.data.pocket_money;
+        this.setState((prevState) => {
+          return {pocketMoney: pocketMoney};
+        });
+        // this.setState({ pocketMoney: pocketMoney });
+      })
+  }
+
   render () {
       return (
         <div>
             <Link className="centerCircle" to="/expense/new">
               <div className="homeCircle centerCircle">
                 <div className="homeCircleData">
-                    $5,241
+                    ${this.state.pocketMoney}
                 </div>
               </div>
             </Link>
