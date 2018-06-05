@@ -12,6 +12,7 @@
   "author": "jordan hiatt",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "dom": "0.0.3",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",

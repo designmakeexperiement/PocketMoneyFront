@@ -6,8 +6,8 @@ $font-color: white;
     left: 50%;
     transform: translate(-50%, -50%);
     position: fixed;
-    height: 20em;
-    width: 20em;
+    height: 30em;
+    width: 30em;
 }
 
 a {
@@ -20,14 +20,12 @@ a {
     border-radius: 50%;
     background-color: $circle-background;
     text-align: center;
-    height: 20em;
-    width: 20em;
     .homeCircleData {
       animation-name: appear;
       animation-duration: 1s;
       color: $font-color;
-      margin-top: 2.5em;
-      font-size: 3em;
+      margin-top: 2.8em;
+      font-size: 4em;
     } 
 }
 
@@ -37,8 +35,8 @@ a {
   animation-name: appear;
   animation-duration: 1s;
   display: inline;
-  height: 24em;
-  width: 24em;
+  height: 36em;
+  width: 36em;
   font-family: 'IBM Plex Mono', monospace;
   color: black;
   span {
@@ -64,8 +62,8 @@ a {
       width: 0em;
     }
     to {
-      height: 20em;
-      width: 20em;
+      height: 30em;
+      width: 30em;
     }
 }
 
@@ -81,4 +79,21 @@ a {
   }
 }
 
+//expense page
+.centerForm {
+    background-color: $circle-background;
+    border-radius: 50%;
+}
 
+.expenseArea { 
+    margin-top: 50%;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // margin: 20%;
+}
+
+.expenseFeild {
+  display: block;
+  padding: 5%;
+}
