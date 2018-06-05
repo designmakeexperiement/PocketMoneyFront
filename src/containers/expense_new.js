@@ -24,10 +24,16 @@ class ExpenseNew extends Component {
     // debugger
     var dateNow = Date.now();
     var expenseAmount = this.state.expenseAmount;
-    axios.post('http://localhost:3000/api/v1/expenses', params: {
+    //sending options to this route and can't get in (need to send a post reqest)
+    axios.post('http://localhost:3000/api/v1/expenses', {
+      headers: {
+        'API-Key': '2DIZtXI9bZL/Pg=='
+      },
+      params: {
         date: dateNow,
         amount: expenseAmount,
         user_id: '1'
+      }
     })
     .then(function (response) {
       console.log(response);
