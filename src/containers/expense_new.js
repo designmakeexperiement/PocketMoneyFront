@@ -27,7 +27,10 @@ class ExpenseNew extends Component {
     //sending options to this route and can't get in (need to send a post reqest)
     axios.post('http://localhost:3000/api/v1/expenses', {
       headers: {
-        'API-Key': '2DIZtXI9bZL/Pg=='
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+        'X-User-Email': process.env.API_EMAIL,
+        'API-Key': process.env.API-Key
       },
       params: {
         date: dateNow,
