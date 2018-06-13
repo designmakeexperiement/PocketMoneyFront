@@ -21,7 +21,6 @@ class ExpenseNew extends Component {
   handleSubmit(event) {
     console.log("!!!!!!!")
     //USER NUMBER HARDCODED!!! CHANGE WHEN APP SECURED
-    // debugger
     var dateNow = Date.now();
     var expenseAmount = this.state.expenseAmount;
     //sending options to this route and can't get in (need to send a post reqest)
@@ -44,6 +43,7 @@ class ExpenseNew extends Component {
     .catch(function (error) {
       console.log(error);
     });
+    // debugger
       // this.setState({ pocketMoney: pocketMoney });
     alert('You spent: ' + this.state.expenseAmount);
     event.preventDefault();
