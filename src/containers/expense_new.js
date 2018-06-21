@@ -19,6 +19,7 @@ class ExpenseNew extends Component {
   }
 
   handleSubmit(event) {
+    event.preventDefault();
     console.log("!!!!!!!")
     //USER NUMBER HARDCODED!!! CHANGE WHEN APP SECURED
     var dateNow = Date.now();
@@ -26,10 +27,9 @@ class ExpenseNew extends Component {
     //sending options to this route and can't get in (need to send a post reqest)
     axios.post('http://localhost:3000/api/v1/expenses', {
       headers: {
-        'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
         'X-User-Email': process.env.API_EMAIL,
-        'API-Key': process.env.API-Key
+        'Authorization': "Token token=2DIZtXI9bZL/Pg=="
       },
       params: {
         date: dateNow,
@@ -46,7 +46,6 @@ class ExpenseNew extends Component {
     // debugger
       // this.setState({ pocketMoney: pocketMoney });
     alert('You spent: ' + this.state.expenseAmount);
-    event.preventDefault();
   }
 
   render () {
